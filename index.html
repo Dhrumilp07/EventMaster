@@ -56,7 +56,7 @@
             <div class="tab-titles">
                 <p class="tab-links active-link" onclick="opentab('events')">Events</p>
                 <p class="tab-links" onclick="opentab('pastrecords')">Past Records</p>
-                <p class="tab-links"onclick="opentab('founding')">Founding</p>
+                <p class="tab-links" onclick="opentab('founding')">Founding</p>
             </div>
             <div class="tab-contents active-tab id="events">
                 <ul>
@@ -167,6 +167,33 @@
         </div>
     </div>
 </div>
+<!----------------------------------past work----------------------------->
+<div id="past">
+  <div class="container">
+    <h1 class="sub-title">Past Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/wedding2.png" alt="Wedding Event">
+      </div>
+      <div class="work">
+        <img src="images/concert.png" alt="Concert Event">
+      </div>
+      <div class="work">
+        <img src="images/corporate.png" alt="Corporate Event">
+      </div>
+      <div class="work">
+        <img src="images/college.png" alt="College Fest">
+      </div>
+      <div class="work">
+        <img src="images/art.png" alt="Art Expo">
+      </div>
+      <div class="work">
+        <img src="images/sports.png" alt="Sports Day">
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!----------------------------------js part----------------------------->
@@ -189,28 +216,28 @@
        <!-- Add reference to your JavaScript file -->
     <script >
              document.addEventListener('DOMContentLoaded', function() {
-        const tabLinks = document.querySelectorAll('.tab-links');
-        const tabContents = document.querySelectorAll('.tab-contents');
-    
-        // Set the first tab content as active by default
-        tabContents[0].classList.add('active-tab');
-    
-        tabLinks.forEach((tab, index) => {
-            tab.addEventListener('click', function() {
-                // Remove active class from all tab links
-                tabLinks.forEach(t => t.classList.remove('active-link'));
-            
-                // Remove active class from all tab contents
-                tabContents.forEach(content => content.classList.remove('active-tab'));
-            
-                // Add active class to clicked tab link
-                this.classList.add('active-link');
-            
-                // Add active class to corresponding tab content
-                tabContents[index].classList.add('active-tab');
-             });
-            });
+    const tabLinks = document.querySelectorAll('.tab-links');
+    const tabContents = document.querySelectorAll('.tab-contents');
+
+    // Set the first tab content as active by default
+    tabContents[0].classList.add('active-tab');
+
+    tabLinks.forEach((tab, index) => {
+        tab.addEventListener('click', function() {
+            // Remove active class from all tab links
+            tabLinks.forEach(t => t.classList.remove('active-link'));
+        
+            // Remove active class from all tab contents
+            tabContents.forEach(content => content.classList.remove('active-tab'));
+        
+            // Add active class to clicked tab link
+            this.classList.add('active-link');
+        
+            // Add active class to corresponding tab content
+            tabContents[index].classList.add('active-tab');
         });
+    });
+});
        </script>
     </body>
 </html>
