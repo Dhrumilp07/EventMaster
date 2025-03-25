@@ -33,14 +33,6 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
-    <script>
-      var typed = new Typed("#element", {
-        strings: ["Concert","Wedding","Birthday","Corporate Event","College Fest","Social Gathering"],
-        typeSpeed: 100,
-      });
-    </script>
 
     <!----------------------------------about----------------------------->
     <div id="about">
@@ -228,6 +220,12 @@
 
 
 <!----------------------------------js part----------------------------->
+<!-- First, include the Typed.js library -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- Then, include your custom initialization script -->
+<script src="typed-init.js"></script>
+
 <script src="tab-script.js"></script>
 <script src="tab-listener-script.js"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
