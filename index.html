@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventMaster</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/edf783a6ff.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo 1.png" class="logo" alt="EventMaster Logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Past Work</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-text">
+          <p>TAKE A TRIP INTO PARADISE</p>
+          <h1>
+            Partner with <span id="title">EventMaster</span> <br />
+            <!-- Element to contain animated typing -->
+            <span id="element"></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Concert","Wedding","Birthday","Corporate Event","College Fest","Social Gathering"],
+        typeSpeed: 100,
+      });
+    </script>
+
+    <!----------------------------------about----------------------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/logo_about.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About us</h1>
+            <p>At EventMaster, we believe that every event tells a story, and our mission is to make yours unforgettable. Whether it's a grand wedding, a vibrant birthday celebration, a corporate event, a pulsating concert, or a cozy social gathering, our dedicated team ensures that every detail is executed to perfection. <br>Partner with EventMaster and experience a journey where creativity meets precision. Let us make your next event truly spectacular!</p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('events')">Events</p>
+                <p class="tab-links" onclick="opentab('pastrecords')">Past Records</p>
+                <p class="tab-links"onclick="opentab('founding')">Founding</p>
+            </div>
+            <div class="tab-contents active-tab id="events">
+                <ul>
+                    <li><span>Social Events</span><br>Weddings, Birthday Parties, Anniversaries, Concerts</li>
+                    <li><span>Educational Events</span><br>College Fests, School Annual Days, Seminars</li>
+                    <li><span>Corporate Events</span><br>Conferences, Product Launches</li>
+                    <li><span>Cultural & Community Events</span><br>Art Exhibitions, Cultural Festivals, Community Gatherings</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="pastrecords">
+                <ul>
+                    <li><span>TechXpo 2025</span><br>A grand tech exhibition and conference featuring global tech leaders.</li>
+                    <li><span>Mega Concert: Beats Unleashed 2024</span><br>A multi-genre music festival attended by thousands.</li>
+                    <li><span>Chennai Marathon 2022</span><br>Annual marathon event attracting athletes and fitness enthusiasts.</li>
+                    <li><span>Food Fiesta 2023 </span><br>A culinary extravaganza celebrating global cuisines.</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="founding">
+                <ul>
+                    <li><span>2020</span><br>Founded as EventMaster, driven by a passion to revolutionize the event management industry through creativity, precision, and technological innovation. The journey began with a small but dedicated team of visionaries aiming to craft unforgettable experiences.</li>
+                    <li><span>2022</span><br>Launched our digital platform to make event booking and management more seamless and user-friendly.</li>
+                    <li><span>2023</span><br>Achieved recognition as a top event management company, hosting over 100 successful events nationwide.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!----------------------------------services----------------------------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Our Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-ring"></i>
+                <h2>Wedding Planning</h2>
+                <p>From intimate ceremonies to grand celebrations, we ensure that your special day is nothing short of a magical dream for you.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h2>Concert Management</h2>
+                <p>Our team of experts will handle everything from artist management to stage setup, ensuring a seamless concert experience.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-building"></i>
+                <h2>Corporate Events</h2>
+                <p>Host successful conferences, product launches, and team-building events with our professional event management services.</p>
+                <a href="#">Learn more</a>
+            </div> 
+            <div>
+                <i class="fa-solid fa-birthday-cake"></i>
+                <h2>Birthday Parties</h2>
+                <p>Let us plan the perfect birthday celebration for you, complete with themed decor, entertainment, and delicious treats.</p>
+                <a href="#">Learn more</a>
+            </div>  
+            <div>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>College Fests</h2>
+                <p>Organize vibrant college festivals, cultural events, and annual days with our creative and innovative event planning services.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-users"></i>
+                <h2>Social Gatherings</h2>
+                <p>Host memorable social gatherings, family reunions, and community events with our personalized event management services.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-lightbulb"></i>
+                <h2>Tech Meetups</h2>
+                <p>Facilitate tech enthusiasts and professionals to connect, share knowledge, and explore emerging technologies.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-trophy"></i>
+                <h2>Sports Tournaments</h2>
+                <p>Organize competitive sports events, from local leagues to large-scale tournaments, with complete logistics and coordination.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>International Conferences</h2>
+                <p>Coordinate large-scale global conferences, complete with accommodation, hospitality, and tech support.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-heart"></i>
+                <h2>Charity Events</h2>
+                <p>Plan and execute charity galas, fundraising events, and community drives to support noble causes.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-brush"></i>
+                <h2>Art Exhibitions</h2>
+                <p>Showcase artworks from renowned and emerging artists in creative and visually appealing setups.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-flag-checkered"></i>
+                <h2>Marathons & Races</h2>
+                <p>Organize large-scale marathon events and charity runs with route planning and on-ground coordination.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----------------------------------js part----------------------------->
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tabLinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabContents){
+                tabcontent.classList.remove("active-tab");
+            }  
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+       <!-- Add reference to your JavaScript file -->
+    <script >
+             document.addEventListener('DOMContentLoaded', function() {
+        const tabLinks = document.querySelectorAll('.tab-links');
+        const tabContents = document.querySelectorAll('.tab-contents');
+    
+        // Set the first tab content as active by default
+        tabContents[0].classList.add('active-tab');
+    
+        tabLinks.forEach((tab, index) => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tab links
+                tabLinks.forEach(t => t.classList.remove('active-link'));
+            
+                // Remove active class from all tab contents
+                tabContents.forEach(content => content.classList.remove('active-tab'));
+            
+                // Add active class to clicked tab link
+                this.classList.add('active-link');
+            
+                // Add active class to corresponding tab content
+                tabContents[index].classList.add('active-tab');
+             });
+            });
+        });
+       </script>
+    </body>
+</html>
