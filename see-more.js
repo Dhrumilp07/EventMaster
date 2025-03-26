@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 service.style.display = 'block';
                 setTimeout(() => {
                     service.style.opacity = '1';
-                    service.style.transform = 'translateY(10)';
+                    service.style.transform = 'translateY(0)';
                 }, 50);
             });
             
