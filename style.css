@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: #080808;
     color: #fff;
@@ -415,5 +417,16 @@ nav .fa-solid{
     .tab-links{
         font-size: 16px;
         margin-right: 20px;
+    }
+    .work-list {
+        grid-template-columns: 1fr; /* Stack items vertically on small screens */
+        gap: 20px; /* Reduce gap between items */
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+        align-items: center;
     }
 }
