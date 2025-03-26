@@ -104,19 +104,27 @@
             const password = this.querySelector('input[name="password"]').value;
             const errorMessage = document.getElementById('errorMessage');
 
-            // Simple user credentials storage (would be replaced by backend authentication)
-            const users = {
-                'dhru': 'password123',
-                'admin': 'eventmaster'
-            };
+            // Retrieve users from local storage
+            const storedUsers = JSON.parse(localStorage.getItem('eventMasterUsers') || '[]');
 
             // Check if username exists and password matches
-            if (users[username] && users[username] === password) {
-                // Successful login - redirect to main page
+            const user = storedUsers.find(u => u.username === username && u.password === password);
+
+            if (user) {
+                // Successful login
+                localStorage.setItem('currentUser', JSON.stringify(user));
                 window.location.href = 'index.html';
             } else {
                 // Show error message
                 errorMessage.textContent = 'Invalid username or password';
+            }
+        });
+
+        // Check if user is already logged in
+        window.addEventListener('load', function() {
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                window.location.href = 'index.html';
             }
         });
     </script>

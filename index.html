@@ -264,6 +264,32 @@
 <script src="side.js"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="see-more.js"></script>
+<script>
+  // Check authentication on page load
+  document.addEventListener('DOMContentLoaded', function() {
+      const currentUser = localStorage.getItem('currentUser');
+      
+      // Create logout button if user is logged in
+      const navUl = document.querySelector('nav ul');
+      const logoutItem = document.createElement('li');
+      
+      if (currentUser) {
+          const user = JSON.parse(currentUser);
+          logoutItem.innerHTML = `<a href="#" id="logout-link">Logout (${user.fullName})</a>`;
+          navUl.appendChild(logoutItem);
+
+          // Add logout functionality
+          document.getElementById('logout-link').addEventListener('click', function(e) {
+              e.preventDefault();
+              localStorage.removeItem('currentUser');
+              window.location.href = 'login.html';
+          });
+      } else {
+          // Redirect to login if not authenticated
+          window.location.href = 'login.html';
+      }
+  });
+</script>
 
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxwnverNn-fAig2GPVMiSG2UdIi_eifm2rpifSD6dUUSl_CSvYyB6gy5m347hKWe-sI/exec'

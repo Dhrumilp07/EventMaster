@@ -128,12 +128,41 @@
           return;
         }
 
-        // Here you would typically send the data to a backend server
-        // For this example, we'll just simulate a successful signup
-        alert('Signup Successful! Welcome to EventMaster, ' + fullName);
-        
-        // Redirect to login page
-        window.location.href = 'login.html';
+        // Retrieve existing users from local storage
+        const storedUsers = JSON.parse(localStorage.getItem('eventMasterUsers') || '[]');
+
+        // Check if username already exists
+        const userExists = storedUsers.some(u => u.username === username);
+        if (userExists) {
+          errorMessage.textContent = 'Username already exists';
+          return;
+        }
+
+        // Create new user object
+        const newUser = {
+          fullName,
+          email,
+          username,
+          password
+        };
+
+        // Add new user to stored users
+        storedUsers.push(newUser);
+        localStorage.setItem('eventMasterUsers', JSON.stringify(storedUsers));
+
+        // Set current user
+        localStorage.setItem('currentUser', JSON.stringify(newUser));
+
+        // Redirect to index page
+        window.location.href = 'index.html';
+      });
+
+      // Check if user is already logged in
+      window.addEventListener('load', function() {
+        const currentUser = localStorage.getItem('currentUser');
+        if (currentUser) {
+          window.location.href = 'index.html';
+        }
       });
     </script>
   </body>
