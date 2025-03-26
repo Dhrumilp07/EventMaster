@@ -361,6 +361,30 @@ form btn2{
     font-weight: 300;   
     margin-top: 20px;
 }
+/*-----------------see-more-----------------*/
+/* Limit initial services visibility */
+.services-list > div:nth-child(n+5) {
+    display: none;
+}
+
+/* Limit initial past work visibility */
+.work-list > .work:nth-child(n+4) {
+    display: none;
+}
+
+/* Smooth transition for showing/hiding elements */
+.services-list > div,
+.work-list > .work {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+}
+
+.services-list > div.hidden,
+.work-list > .work.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    display: none;
+}
 
 /*-----------------responsive-----------------*/
 nav .fa-solid{
