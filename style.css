@@ -18,6 +18,8 @@ body {
     background-image: url('images/bg2.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* This creates the parallax effect */
+    background-repeat: no-repeat;
     display: flex;
 }
 
