@@ -236,12 +236,13 @@
         </div>
       </div>
       <div class="contact-right">
-        <form>
+        <form name="submit-to-google-sheet">
             <input type="text" name="Name"  placeholder="Your Name" required>
             <input type="email" name="Email" placeholder="Your Email" required>
             <textarea name="Message" row="6" placeholder="Your Message" ></textarea>
             <button type="submit" class="btn btn2">Submit</button>
         </form>
+        <span id="msg">hello</span>
       </div>
     </div>
   </div>
@@ -262,6 +263,18 @@
 <script src="tab-listener-script.js"></script>
 <script src="side.js"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxwnverNn-fAig2GPVMiSG2UdIi_eifm2rpifSD6dUUSl_CSvYyB6gy5m347hKWe-sI/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 <script>
     var typed = new Typed("#element", {
         strings: ["Concert","Wedding","Birthday","Corporate Event","College Fest","Social Gathering"],
