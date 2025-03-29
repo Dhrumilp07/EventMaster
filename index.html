@@ -90,73 +90,73 @@
                 <i class="fa-solid fa-ring"></i>
                 <h2>Wedding Planning</h2>
                 <p>From intimate ceremonies to grand celebrations, we ensure that your special day is nothing short of a magical dream for you.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('wedding')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-champagne-glasses"></i>
                 <h2>Concert Management</h2>
                 <p>Our team of experts will handle everything from artist management to stage setup, ensuring a seamless concert experience.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('concert')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-building"></i>
                 <h2>Corporate Events</h2>
                 <p>Host successful conferences, product launches, and team-building events with our professional event management services.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('corporate')">Learn more</a>
             </div> 
             <div>
                 <i class="fa-solid fa-birthday-cake"></i>
                 <h2>Birthday Parties</h2>
                 <p>Let us plan the perfect birthday celebration for you, complete with themed decor, entertainment, and delicious treats.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('birthday')">Learn more</a>
             </div>  
             <div>
                 <i class="fa-solid fa-graduation-cap"></i>
                 <h2>College Fests</h2>
                 <p>Organize vibrant college festivals, cultural events, and annual days with our creative and innovative event planning services.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('college')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-users"></i>
                 <h2>Social Gatherings</h2>
                 <p>Host memorable social gatherings, family reunions, and community events with our personalized event management services.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('social')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-lightbulb"></i>
                 <h2>Tech Meetups</h2>
                 <p>Facilitate tech enthusiasts and professionals to connect, share knowledge, and explore emerging technologies.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('tech')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-trophy"></i>
                 <h2>Sports Tournaments</h2>
                 <p>Organize competitive sports events, from local leagues to large-scale tournaments, with complete logistics and coordination.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('sports')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-globe"></i>
                 <h2>International Conferences</h2>
                 <p>Coordinate large-scale global conferences, complete with accommodation, hospitality, and tech support.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('international')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-heart"></i>
                 <h2>Charity Events</h2>
                 <p>Plan and execute charity galas, fundraising events, and community drives to support noble causes.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('charity')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-brush"></i>
                 <h2>Art Exhibitions</h2>
                 <p>Showcase artworks from renowned and emerging artists in creative and visually appealing setups.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('art')">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-flag-checkered"></i>
                 <h2>Marathons & Races</h2>
                 <p>Organize large-scale marathon events and charity runs with route planning and on-ground coordination.</p>
-                <a href="#">Learn more</a>
+                <a href="javascript:void(0)" onclick="openServiceModal('marathon')">Learn more</a>
             </div>
         </div>
         <a href="#" class="btn">See more</a>
@@ -264,6 +264,7 @@
 <script src="side.js"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="see-more.js"></script>
+<script src="service-modal.js"></script>
 <script>
   // Check authentication on page load
   document.addEventListener('DOMContentLoaded', function() {
@@ -315,5 +316,17 @@
         typeSpeed: 100,
     });
 </script>
+
+
+<!-- Service Modal -->
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeServiceModal()">&times;</span>
+    <h2 id="modalTitle">Service Details</h2>
+    <div id="modalContent">
+      <!-- Content will be dynamically inserted here -->
+    </div>
+  </div>
+</div>
     </body>
 </html>

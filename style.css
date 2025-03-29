@@ -470,3 +470,183 @@ nav .fa-solid{
     margin-top: -40px;
     display: block;
 }
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s;
+  }
+  
+  .modal-content {
+    background-color: #262626;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.3s;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close-button:hover {
+    color: #ff004f;
+  }
+  
+  .modal-service-details {
+    padding: 20px 0;
+  }
+  
+  .modal-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-service-details h3 {
+    color: #fff;
+    margin: 20px 0 10px;
+    font-size: 24px;
+  }
+  
+  .modal-service-details p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .modal-service-details ul {
+    margin: 15px 0;
+    padding-left: 20px;
+  }
+  
+  .modal-service-details li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .package {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .package:hover {
+    transform: translateY(-5px);
+    background-color: #3a3a3a;
+  }
+  
+  .package h4 {
+    color: #ff004f;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .package .price {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #fff;
+  }
+  
+  .testimonials {
+    margin: 30px 0;
+  }
+  
+  .testimonial {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    position: relative;
+  }
+  
+.testimonial:before {
+    content: "";
+    font-size: 60px;
+    color: #ff004f;
+    opacity: 0.3;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+}
+  
+  .testimonial .client {
+    text-align: right;
+    margin-top: 10px;
+    font-style: italic;
+    color: #ff004f;
+  }
+  
+  .cta-section {
+    text-align: center;
+    margin: 30px 0 10px;
+    padding: 30px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+  
+  .modal-btn {
+    display: inline-block;
+    background: #ff004f;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .modal-btn:hover {
+    background: #e0003d;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Responsive adjustments */
+  @media only screen and (max-width: 768px) {
+    .modal-content {
+      width: 95%;
+      padding: 20px;
+      margin: 10% auto;
+    }
+    
+    .packages {
+      grid-template-columns: 1fr;
+    }
+  }
