@@ -531,7 +531,7 @@ function openServiceModal(serviceType) {
       case "social":
         modalTitle.textContent = "Social Gathering Services";
         modalContent.innerHTML = `
-                  ${createImageGrid("socialgathering")}
+                  ${createImageGrid("social")}
                   <div class="modal-service-details">
                       <p>Host memorable social gatherings that bring people together with our professional planning and execution services.</p>
                       
@@ -1021,7 +1021,7 @@ function openServiceModal(serviceType) {
     case "art":
     modalTitle.textContent = "Art Exhibition Services"
     modalContent.innerHTML = `
-              ${createImageGrid("artexhibition")}
+              ${createImageGrid("art")}
               <div class="modal-service-details">
                   <p>Showcase artistic talent with professionally managed art exhibitions that create the perfect environment for artists and art enthusiasts.</p>
                   
