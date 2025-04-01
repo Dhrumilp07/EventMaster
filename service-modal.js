@@ -69,7 +69,21 @@ function openServiceModal(serviceType) {
                       <div class="cta-section">
                           <h3>Ready to Plan Your Dream Wedding?</h3>
                           <p>Contact us today for a free consultation and let's start planning your perfect day.</p>
-                          <a href="#contact" class="modal-btn" onclick="closeServiceModal()">Contact Us Now</a>
+                      </div>
+                        <div class="modal-form-section">
+                        <h3>Inquire About Our Wedding Services</h3>
+                        <p>Fill out the form below and we'll get back to you with more details about our wedding packages.</p>
+                        
+                        <form class="modal-inquiry-form">
+                          <input type="text" name="name" placeholder="Your Name" required>
+                          <input type="email" name="email" placeholder="Your Email" required>
+                          <input type="tel" name="phone" placeholder="Your Phone Number">
+                          <input type="text" name="weddingDate" placeholder="Wedding Date">
+                          <input type="hidden" name="serviceType" value="wedding">
+                          <textarea name="message" placeholder="Tell us more about your wedding vision" rows="4" required></textarea>
+                          <button type="submit" class="btn2">Submit Inquiry</button>
+                        </form>
+                        <div id="form-msg"></div>
                       </div>
                   </div>
               `
@@ -405,3 +419,36 @@ function openServiceModal(serviceType) {
       closeServiceModal()
     }
   })
+  // Form handling
+document.addEventListener('click', function(e) {
+    if (e.target && e.target.matches('.modal-inquiry-form button')) {
+      e.preventDefault();
+      const form = e.target.closest('form');
+      const formMsg = form.nextElementSibling;
+      
+      // Get form data
+      const formData = new FormData(form);
+      const formObject = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+      
+      // Here you would typically send the data to your server
+      // For demonstration, we'll just show a success message
+      console.log('Form data:', formObject);
+      
+      // Display success message
+      formMsg.textContent = "Thank you for your inquiry! We'll contact you shortly.";
+      formMsg.style.color = "#61b752";
+      formMsg.style.display = "block";
+      formMsg.style.padding = "15px 0";
+      
+      // Reset form
+      form.reset();
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        formMsg.style.display = "none";
+      }, 5000);
+    }
+  });

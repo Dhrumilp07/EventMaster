@@ -691,3 +691,54 @@ nav .fa-solid{
       height: 180px;
     }
   }
+  /* Modal Form Styles */
+.modal-form-section {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.modal-inquiry-form {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-inquiry-form input,
+.modal-inquiry-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #262626;
+  color: #fff;
+  font-size: 16px;
+}
+
+.modal-inquiry-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.modal-inquiry-form button {
+  justify-self: start;
+  background-color: #ff004f;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.modal-inquiry-form button:hover {
+  background-color: #e0003d;
+}
+
+#form-msg {
+  margin-top: 15px;
+  font-weight: 500;
+  display: none;
+}
