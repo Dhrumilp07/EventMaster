@@ -433,7 +433,7 @@ function openServiceModal(serviceType) {
     case "college":
       modalTitle.textContent = "College Festival Services";
       modalContent.innerHTML = `
-                                      ${createImageGrid("collegefest")}
+                                      ${createImageGrid("college")}
                                       <div class="modal-service-details">
                                           <p>Create an unforgettable college festival that engages students and builds campus spirit with our specialized event management services.</p>
                                           
