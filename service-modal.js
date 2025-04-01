@@ -430,7 +430,7 @@ function openServiceModal(serviceType) {
                               `;
       break;
 
-    case "collegefest":
+    case "college":
       modalTitle.textContent = "College Festival Services";
       modalContent.innerHTML = `
                                       ${createImageGrid("collegefest")}
@@ -528,7 +528,7 @@ function openServiceModal(serviceType) {
                                   `;
       break;
 
-      case "socialgathering":
+      case "social":
         modalTitle.textContent = "Social Gathering Services";
         modalContent.innerHTML = `
                   ${createImageGrid("socialgathering")}
@@ -1018,7 +1018,7 @@ function openServiceModal(serviceType) {
           `
     break;
 
-    case "artexhibition":
+    case "art":
     modalTitle.textContent = "Art Exhibition Services"
     modalContent.innerHTML = `
               ${createImageGrid("artexhibition")}
