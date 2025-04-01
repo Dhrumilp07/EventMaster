@@ -4,12 +4,28 @@ function openServiceModal(serviceType) {
     const modalTitle = document.getElementById("modalTitle")
     const modalContent = document.getElementById("modalContent")
   
+    // Image grid HTML to be used for each service type
+    const createImageGrid = (service) => {
+      return `
+        <div class="service-image-grid">
+          <img src="images/services/${service}1.png" alt="${capitalizeFirstLetter(service)} Image 1" class="grid-img">
+          <img src="images/services/${service}2.png" alt="${capitalizeFirstLetter(service)} Image 2" class="grid-img">
+          <img src="images/services/${service}3.png" alt="${capitalizeFirstLetter(service)} Image 3" class="grid-img">
+          <img src="images/services/${service}4.png" alt="${capitalizeFirstLetter(service)} Image 4" class="grid-img">
+          <img src="images/services/${service}5.png" alt="${capitalizeFirstLetter(service)} Image 5" class="grid-img">
+          <img src="images/services/${service}6.png" alt="${capitalizeFirstLetter(service)} Image 6" class="grid-img">
+          <img src="images/services/${service}7.png" alt="${capitalizeFirstLetter(service)} Image 7" class="grid-img">
+          <img src="images/services/${service}8.png" alt="${capitalizeFirstLetter(service)} Image 8" class="grid-img">
+        </div>
+      `
+    }
+  
     // Set modal title and content based on service type
     switch (serviceType) {
       case "wedding":
         modalTitle.textContent = "Wedding Planning Services"
         modalContent.innerHTML = `
-                  <img src="images/wedding2.png" alt="Wedding Services" class="modal-img">
+                  ${createImageGrid("wedding")}
                   <div class="modal-service-details">
                       <p>Your special day deserves nothing but perfection. At EventMaster, we transform your wedding dreams into reality with our comprehensive wedding planning services.</p>
                       
@@ -62,7 +78,7 @@ function openServiceModal(serviceType) {
       case "concert":
         modalTitle.textContent = "Concert Management Services"
         modalContent.innerHTML = `
-                  <img src="images/concert.png" alt="Concert Services" class="modal-img">
+                  ${createImageGrid("concert")}
                   <div class="modal-service-details">
                       <p>From intimate music gatherings to large-scale festivals, our concert management team ensures a seamless and unforgettable experience for artists and audiences alike.</p>
                       
@@ -115,7 +131,7 @@ function openServiceModal(serviceType) {
       case "corporate":
         modalTitle.textContent = "Corporate Event Services"
         modalContent.innerHTML = `
-                  <img src="images/corporate.png" alt="Corporate Services" class="modal-img">
+                  ${createImageGrid("corporate")}
                   <div class="modal-service-details">
                       <p>Make a lasting impression with professionally managed corporate events that align with your company's goals and brand identity.</p>
                       
@@ -168,7 +184,7 @@ function openServiceModal(serviceType) {
       case "birthday":
         modalTitle.textContent = "Birthday Party Services"
         modalContent.innerHTML = `
-                  <img src="/placeholder.svg?height=300&width=600" alt="Birthday Services" class="modal-img">
+                  ${createImageGrid("birthday")}
                   <div class="modal-service-details">
                       <p>Celebrate another year of life with a birthday party that reflects your personality and creates lasting memories.</p>
                       
@@ -221,7 +237,7 @@ function openServiceModal(serviceType) {
       case "college":
         modalTitle.textContent = "College Fest Services"
         modalContent.innerHTML = `
-                  <img src="images/college.png" alt="College Fest Services" class="modal-img">
+                  ${createImageGrid("college")}
                   <div class="modal-service-details">
                       <p>Transform your college event into an unforgettable experience with our specialized college fest management services.</p>
                       
@@ -274,7 +290,7 @@ function openServiceModal(serviceType) {
       case "social":
         modalTitle.textContent = "Social Gathering Services"
         modalContent.innerHTML = `
-                  <img src="/placeholder.svg?height=300&width=600" alt="Social Gathering Services" class="modal-img">
+                  ${createImageGrid("social")}
                   <div class="modal-service-details">
                       <p>From intimate family reunions to large community events, our social gathering services ensure memorable connections and experiences.</p>
                       
@@ -333,7 +349,7 @@ function openServiceModal(serviceType) {
       case "marathon":
         modalTitle.textContent = capitalizeFirstLetter(serviceType) + " Event Services"
         modalContent.innerHTML = `
-                  <img src="/placeholder.svg?height=300&width=600" alt="${capitalizeFirstLetter(serviceType)} Services" class="modal-img">
+                  ${createImageGrid(serviceType)}
                   <div class="modal-service-details">
                       <p>Our ${serviceType} event services are currently being updated with new packages and offerings.</p>
                       <p>Please contact us directly for detailed information about our ${serviceType} event management services.</p>
@@ -389,5 +405,3 @@ function openServiceModal(serviceType) {
       closeServiceModal()
     }
   })
-  
-  
